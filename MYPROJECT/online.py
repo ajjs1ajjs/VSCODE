@@ -1,12 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-Steam Online Games Viewer
-- Пошук ігор Steam (через SteamSpy)
-- Поточна кількість гравців (Steam API)
-- Логування у файл online.log
-"""
 
 import os
 import sys
@@ -16,9 +7,8 @@ import logging
 import traceback
 import requests
 
-# =========================
 # CONFIG
-# =========================
+
 APP_LIST_FILE = "steam_applist_cache.json"
 APP_LIST_TTL = 24 * 3600  # 24 години
 
@@ -30,9 +20,8 @@ STEAM_CURRENT_PLAYERS_URL = (
 
 LOG_FILE = "online.log"
 
-# =========================
 # LOGGING
-# =========================
+
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -44,9 +33,8 @@ logging.basicConfig(
 
 log = logging.getLogger("steam-online")
 
-# =========================
 # FUNCTIONS
-# =========================
+
 def load_app_list():
     log.info("Завантаження списку ігор через SteamSpy")
 
@@ -108,10 +96,8 @@ def get_current_players(appid):
         log.exception("Помилка Steam API players (appid=%s)", appid)
         return None
 
-
-# =========================
 # MAIN
-# =========================
+
 def main():
     log.info("=== START PROGRAM ===")
 
@@ -151,10 +137,8 @@ def main():
         players = get_current_players(appid)
         print("Current players:", players if players is not None else "N/A")
 
-
-# =========================
 # ENTRY POINT
-# =========================
+
 if __name__ == "__main__":
     try:
         main()
