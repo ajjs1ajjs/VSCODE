@@ -7,8 +7,6 @@
 
 Мета — розвиватися, набиратися досвіду та з часом створювати якісні, корисні й стабільні продукти.
 
-🚀 Це лише початок.
-
 🇬🇧 English
 
 Hi!
@@ -17,5 +15,3 @@ This is the beginning of my journey into building my own projects. Here I take m
 Projects in this repository may change, evolve, or be rewritten — that’s part of the learning process.
 
 My goal is to grow, gain experience, and eventually create high-quality, useful, and reliable products.
-
-🚀 This is just the beginning.
